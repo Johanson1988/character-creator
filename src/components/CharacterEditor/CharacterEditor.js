@@ -1,21 +1,20 @@
-import React from 'react';
-
 import {
-  defaultSkinColor,
-  defaultClothesColor,
-} from '../../constants';
-import Character from '../Character';
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import ControlPane from '../ControlPane';
-
-import {
-  bodyOptions,
-  headOptions,
-  faceOptions,
   accessoryOptions,
-  skinColorOptions,
+  bodyOptions,
   clothesColorOptions,
+  faceOptions,
+  headOptions,
+  skinColorOptions,
 } from './CharacterEditor.helpers';
+import {
+  defaultClothesColor,
+  defaultSkinColor,
+} from '../../constants';
+
+import Character from '../Character';
+import ControlPane from '../ControlPane';
+import MaxWidthWrapper from '../MaxWidthWrapper';
+import React from 'react';
 import styles from './CharacterEditor.module.css';
 
 function App() {
@@ -30,6 +29,14 @@ function App() {
 
   return (
     <main className={styles.characterEditor}>
+      <div style={{
+          backgroundColor: 'hsl(195deg, 20%, 86%)',
+          height: '65%',
+          width: '100%',
+          position: 'fixed',
+          bottom: '0',
+          zIndex: '-1',
+      }} id='background-div' />
       <MaxWidthWrapper className={styles.maxWidthWrapper}>
         <header className={styles.header}>
           <h1 className={styles.title}>Create your Character</h1>
